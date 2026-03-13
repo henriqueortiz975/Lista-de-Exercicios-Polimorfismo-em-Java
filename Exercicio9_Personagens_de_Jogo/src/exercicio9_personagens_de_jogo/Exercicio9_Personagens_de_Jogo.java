@@ -1,21 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package exercicio9_personagens_de_jogo;
 
-/**
- *
- * @author aluno.saolucas
- */
 public class Exercicio9_Personagens_de_Jogo {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Personagem objG = new Guerreiro("Henrique", 10, 120, 30, "Espada", 20);
+        Personagem objM = new Mago("Maria", 12, 80, 100, "Fogo", 40);
+        Personagem objA = new Arqueiro("joão", 11, 90, 35, "Arco", 50);
+        Personagem objL = new Ladino("Murilo", 9, 85, 45, true, "Adaga");
+        Personagem objP = new Paladino("Arthur", 13, 130, 60, 35, true);
+
+        objG.atacar();
+        objM.atacar();
+        objA.atacar();
+        objL.atacar();
+        objP.atacar();
     }
     
 }
