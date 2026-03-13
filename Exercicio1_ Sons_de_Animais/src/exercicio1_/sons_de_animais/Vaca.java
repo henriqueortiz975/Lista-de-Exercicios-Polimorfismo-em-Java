@@ -3,8 +3,16 @@ package exercicio1_.sons_de_animais;
 public class Vaca extends Animal {
 
     private String raca;
-    private String cor;
-    private boolean produzLeite;
+    private double producaoLeite;
+    private boolean temChifre;
+
+    public Vaca(String nome, int idade, double peso,
+                String raca, double producaoLeite, boolean temChifre) {
+        super(nome, idade, peso);
+        this.raca = raca;
+        this.producaoLeite = producaoLeite;
+        this.temChifre = temChifre;
+    }
 
     public String getRaca() {
         return raca;
@@ -14,24 +22,24 @@ public class Vaca extends Animal {
         this.raca = raca;
     }
 
-    public String getCor() {
-        return cor;
+    public double getProducaoLeite() {
+        return producaoLeite;
     }
 
-    public void setCor(String cor) {
-        this.cor = cor;
+    public void setProducaoLeite(double producaoLeite) {
+        this.producaoLeite = producaoLeite;
     }
 
-    public boolean isProduzLeite() {
-        return produzLeite;
+    public boolean isTemChifre() {
+        return temChifre;
     }
 
-    public void setProduzLeite(boolean produzLeite) {
-        this.produzLeite = produzLeite;
+    public void setTemChifre(boolean temChifre) {
+        this.temChifre = temChifre;
     }
 
     @Override
     public void emitirSom() {
-        System.out.println("A vaca faz: Muuu!");
+        System.out.println("A vaca faz som");
     }
 }

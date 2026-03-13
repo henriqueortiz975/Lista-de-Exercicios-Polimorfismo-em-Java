@@ -3,8 +3,16 @@ package exercicio1_.sons_de_animais;
 public class Cavalo extends Animal {
 
     private String raca;
-    private String cor;
     private double velocidade;
+    private boolean usadoParaCorrida;
+
+    public Cavalo(String nome, int idade, double peso,
+                  String raca, double velocidade, boolean usadoParaCorrida) {
+        super(nome, idade, peso);
+        this.raca = raca;
+        this.velocidade = velocidade;
+        this.usadoParaCorrida = usadoParaCorrida;
+    }
 
     public String getRaca() {
         return raca;
@@ -12,14 +20,6 @@ public class Cavalo extends Animal {
 
     public void setRaca(String raca) {
         this.raca = raca;
-    }
-
-    public String getCor() {
-        return cor;
-    }
-
-    public void setCor(String cor) {
-        this.cor = cor;
     }
 
     public double getVelocidade() {
@@ -30,8 +30,16 @@ public class Cavalo extends Animal {
         this.velocidade = velocidade;
     }
 
+    public boolean isUsadoParaCorrida() {
+        return usadoParaCorrida;
+    }
+
+    public void setUsadoParaCorrida(boolean usadoParaCorrida) {
+        this.usadoParaCorrida = usadoParaCorrida;
+    }
+
     @Override
     public void emitirSom() {
-        System.out.println("O cavalo relincha: Hiiii!");
+        System.out.println("O cavalo relincha");
     }
 }

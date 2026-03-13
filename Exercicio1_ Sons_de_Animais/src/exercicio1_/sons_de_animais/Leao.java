@@ -1,42 +1,46 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package exercicio1_.sons_de_animais;
 
 public class Leao extends Animal {
 
-    private String origem;
-    private String corJuba;
-    private boolean alfa;
+    private String habitat;
+    private boolean liderDoBando;
+    private int forca;
 
-    public String getOrigem() {
-        return origem;
+    public Leao(String nome, int idade, double peso,
+                String habitat, boolean liderDoBando, int forca) {
+        super(nome, idade, peso);
+        this.habitat = habitat;
+        this.liderDoBando = liderDoBando;
+        this.forca = forca;
     }
 
-    public void setOrigem(String origem) {
-        this.origem = origem;
+    public String getHabitat() {
+        return habitat;
     }
 
-    public String getCorJuba() {
-        return corJuba;
+    public void setHabitat(String habitat) {
+        this.habitat = habitat;
     }
 
-    public void setCorJuba(String corJuba) {
-        this.corJuba = corJuba;
+    public boolean isLiderDoBando() {
+        return liderDoBando;
     }
 
-    public boolean isAlfa() {
-        return alfa;
+    public void setLiderDoBando(boolean liderDoBando) {
+        this.liderDoBando = liderDoBando;
     }
 
-    public void setAlfa(boolean alfa) {
-        this.alfa = alfa;
+    public int getForca() {
+        return forca;
+    }
+
+    public void setForca(int forca) {
+        this.forca = forca;
     }
 
     @Override
     public void emitirSom() {
-        System.out.println("O leão ruge: ROARRR!");
+        System.out.println("O leão ruge");
     }
 }
+

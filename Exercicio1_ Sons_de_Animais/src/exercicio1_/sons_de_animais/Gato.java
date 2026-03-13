@@ -2,16 +2,16 @@ package exercicio1_.sons_de_animais;
 
 public class Gato extends Animal {
 
-    private String raca;
     private String cor;
-    private boolean temBigode;
+    private boolean gostaDormir;
+    private int vidas;
 
-    public String getRaca() {
-        return raca;
-    }
-
-    public void setRaca(String raca) {
-        this.raca = raca;
+    public Gato(String nome, int idade, double peso,
+                String cor, boolean gostaDormir, int vidas) {
+        super(nome, idade, peso);
+        this.cor = cor;
+        this.gostaDormir = gostaDormir;
+        this.vidas = vidas;
     }
 
     public String getCor() {
@@ -22,16 +22,24 @@ public class Gato extends Animal {
         this.cor = cor;
     }
 
-    public boolean isTemBigode() {
-        return temBigode;
+    public boolean isGostaDormir() {
+        return gostaDormir;
     }
 
-    public void setTemBigode(boolean temBigode) {
-        this.temBigode = temBigode;
+    public void setGostaDormir(boolean gostaDormir) {
+        this.gostaDormir = gostaDormir;
+    }
+
+    public int getVidas() {
+        return vidas;
+    }
+
+    public void setVidas(int vidas) {
+        this.vidas = vidas;
     }
 
     @Override
     public void emitirSom() {
-        System.out.println("O gato mia: Miau!");
+        System.out.println("O gato mia");
     }
 }

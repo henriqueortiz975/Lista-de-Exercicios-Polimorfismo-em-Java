@@ -3,8 +3,16 @@ package exercicio1_.sons_de_animais;
 public class Cachorro extends Animal {
 
     private String raca;
-    private String cor;
-    private boolean domesticado;
+    private boolean lateMuito;
+    private String tamanho;
+
+    public Cachorro(String nome, int idade, double peso,
+                    String raca, boolean lateMuito, String tamanho) {
+        super(nome, idade, peso);
+        this.raca = raca;
+        this.lateMuito = lateMuito;
+        this.tamanho = tamanho;
+    }
 
     public String getRaca() {
         return raca;
@@ -14,24 +22,24 @@ public class Cachorro extends Animal {
         this.raca = raca;
     }
 
-    public String getCor() {
-        return cor;
+    public boolean isLateMuito() {
+        return lateMuito;
     }
 
-    public void setCor(String cor) {
-        this.cor = cor;
+    public void setLateMuito(boolean lateMuito) {
+        this.lateMuito = lateMuito;
     }
 
-    public boolean isDomesticado() {
-        return domesticado;
+    public String getTamanho() {
+        return tamanho;
     }
 
-    public void setDomesticado(boolean domesticado) {
-        this.domesticado = domesticado;
+    public void setTamanho(String tamanho) {
+        this.tamanho = tamanho;
     }
 
     @Override
     public void emitirSom() {
-        System.out.println("O cachorro late: Au Au!");
+        System.out.println("O cachorro late");
     }
 }
